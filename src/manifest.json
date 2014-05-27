@@ -1,0 +1,31 @@
+{
+  "name": "IdobataSushiyuki",
+  "short_name": "いどゆき",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "idobataに寿司ゆき™ボタンを追加します",
+  "icons": {
+    "48":  "images/icon_48.png",
+    "128": "images/icon_128.png"
+  },
+  "permissions": [
+    "https://idobata.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://idobata.io/*"],
+      "css": [
+        "css/idoyuki.css"
+      ],
+      "js": [
+        "js/jquery-2.1.0.min.js",
+        "js/bootstrap.min.js",
+        "js/underscore-min.js",
+        "js/idoyuki.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "js/underscore-min.map"
+  ]
+}
