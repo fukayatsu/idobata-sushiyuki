@@ -5,4 +5,5 @@ idobata-sushiyuki
 
 ## License
 
-[SUSHI-YUKI(寿司ゆき)](https://store.line.me/stickershop/detail?packageId=1000037) Copyright (c) 2014 [awayuki](https://github.com/awayuki). All rights reserved.
+[SUSHIYUKI(寿司ゆき)](http://awayuki.net/sushiyuki/)
+Copyright (c) 2014 [awayuki](https://github.com/awayuki). (CC BY-NC-ND 4.0)
