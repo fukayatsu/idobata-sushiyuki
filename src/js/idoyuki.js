@@ -27,7 +27,7 @@ $(document).on('click', '#sushiyuki', function(ev){
 $(document).on('click', 'img.sushi', function(ev){
   $('#sushi_contents').modal('hide');
   var imageUrl = $(ev.target).attr('src');
-  var matches = $('.room.active a').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
+  var matches = $('.primary-sidebar a.active').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
   var params = {
     organization_slug: matches[1],
     room_name:         matches[2]
