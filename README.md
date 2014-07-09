@@ -1,7 +1,7 @@
 idobata-sushiyuki
 =================
 
-![](https://raw.githubusercontent.com/fukayatsu/idobata-sushiyuki/master/screenshots/sushi_picker.png)
+![idoyuki](https://cloud.githubusercontent.com/assets/1041857/3526228/42519a42-077a-11e4-9c52-9b4b66bae9fd.gif)
 
 ## License
 
