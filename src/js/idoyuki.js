@@ -3,7 +3,7 @@ var addSushiButton = function(){
     if ($('#sushiyuki').length == 0){
       $('.message-form textarea').before('<button id="sushiyuki" class="btn attach-file-text"><img src="'+chrome.extension.getURL('images/btn-sushiyuki.png')+'"></button>')
       var contents = '<div id="sushi_contents" class="modal fade" aria-hidden="true" style="display: none;"><div class="modal-header"><button class="close" data-dismiss="modal" type="button">×</button><h3>pick sushi</h3></div><div class="modal-body">'
-      _.each(_.range(1, 41), function(num){
+      _.each(_.range(1, 81), function(num){
         contents += '<img class="sushi" src="https://d1zd1v0cxnbx2w.cloudfront.net/images/sets/sushiyuki/' +("0"+num).slice(-2)+ '.png">'
       });
       contents += '</div></div>'
