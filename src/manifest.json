@@ -27,6 +27,7 @@
   ],
   "web_accessible_resources": [
     "js/underscore-min.map",
-    "images/btn-sushiyuki.png"
+    "images/btn-sushiyuki.png",
+    "images/btn-sushiyuki-black.png"
   ]
 }
