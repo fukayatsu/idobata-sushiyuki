@@ -2,16 +2,12 @@ var addSushiButton = function(){
   setTimeout(function(){
     if (!$('.message-form textarea').length) { return; }
     if ($('#sushiyuki').length == 0){
-      if ($('#app')[0]) {
-        $('.message-form textarea').parent().append('<label id="sushiyuki" class="ember-view file-select-button btn tooltipstered"><img src="'+chrome.extension.getURL('images/btn-sushiyuki-black.png')+'"></label>')
-      } else {
-        $('.message-form textarea').before('<button id="sushiyuki" class="btn attach-file-text"><img src="'+chrome.extension.getURL('images/btn-sushiyuki.png')+'"></button>')
-      }
-      var contents = '<div id="sushi_contents" class="modal fade" aria-hidden="true" style="display: none;"><div class="modal-header"><button class="close" data-dismiss="modal" type="button">×</button><h3>pick sushi</h3></div><div class="modal-body">'
+      $('.message-form textarea').parent().append('<label id="sushiyuki" class="ember-view file-select-button btn tooltipstered"><img src="'+chrome.extension.getURL('images/btn-sushiyuki.png')+'"></label>')
+      var contents = '<div id="sushi_contents" class="modal fade" tabindex="-1" role="dialog"aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Pick sushi</h4></div><div class="modal-body">'
       _.each(_.range(1, 81), function(num){
         contents += '<img class="sushi" src="https://d1zd1v0cxnbx2w.cloudfront.net/images/sets/sushiyuki/' +("0"+num).slice(-2)+ '.png">'
       });
-      contents += '</div></div>'
+      contents += '</div></div></div></div>'
       $('body').append(contents)
     }
   }, 500)
@@ -33,10 +29,7 @@ $(document).on('click', '#sushiyuki', function(ev){
 $(document).on('click', 'img.sushi', function(ev){
   $('#sushi_contents').modal('hide');
   var imageUrl = $(ev.target).attr('src');
-  var matches = $(
-    $('.primary-sidebar a.active')[0] ||
-    $('aside.sidebar.vertical-container.left .indented.active')[0]
-  ).attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
+  var matches = $('aside.sidebar.vertical-container.left .indented.active').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
   var params = {
     organization_slug: matches[1],
     room_name:         matches[2]
