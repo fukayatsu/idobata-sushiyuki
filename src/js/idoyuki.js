@@ -17,7 +17,7 @@ $(function(){
   addSushiButton();
 });
 
-$(document).on('click', '.ember-view.room, .ember-view.indented, .message-form textarea', function(ev){
+$(document).on('click', '.ember-view.room, aside.sidebar.vertical-container.left, .message-form textarea', function(ev){
   addSushiButton();
 });
 
@@ -29,7 +29,7 @@ $(document).on('click', '#sushiyuki', function(ev){
 $(document).on('click', 'img.sushi', function(ev){
   $('#sushi_contents').modal('hide');
   var imageUrl = $(ev.target).attr('src');
-  var matches = $('aside.sidebar.vertical-container.left .indented.active').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
+  var matches = $('aside.sidebar.vertical-container.left a.active').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
   var params = {
     organization_slug: matches[1],
     room_name:         matches[2]
@@ -46,9 +46,6 @@ $(document).on('click', 'img.sushi', function(ev){
       data: params,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      success: function(msg) {
-        console.log(msg);
       },
       error: function(msg) {
         console.log(msg);
