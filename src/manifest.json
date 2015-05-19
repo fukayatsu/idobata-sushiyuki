@@ -1,7 +1,7 @@
 {
   "name": "IdoYuki(いどゆき)",
   "short_name": "いどゆき",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "manifest_version": 2,
   "description": "idobataに寿司ゆき™ボタンを追加します",
   "icons": {
